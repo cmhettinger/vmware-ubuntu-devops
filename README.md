@@ -20,8 +20,7 @@ sudo systemctl restart console-setup.service
 reboot
 ~~~
 
-* SETUP SSH DIRECTORY
-** NOTE: need to do this below as jenkins user/TBD
+* SETUP SSH DIRECTORY : NOTE: need to do this below as jenkins user/TBD
 ~~~
 mkdir -p ~/.ssh
 ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
@@ -34,4 +33,11 @@ echo "IdentityFile ~/.ssh/git" >> ~/.ssh/config
 Copy files for GitHub into ~/.ssh
   -- github
   -- github.pub
-  
+
+* ADD LOCATION TO GRADLE.PROPERTIES
+
+~~~
+nexus_user=myuser
+nexus_password=mypassword
+nexus_url=http://w.x.y.z:8081/
+~~~
