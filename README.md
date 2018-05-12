@@ -34,6 +34,24 @@ Copy files for GitHub into ~/.ssh
   -- github
   -- github.pub
 
+* BOOTSTRAP VM
+
+~~~
+sudo mkdir -p /data/1
+sudo chown `whoami`:`whoami` /data/1
+git clone git@github.com:cmhettinger/vmware-ubuntu-devops.git /data/1/bin
+/data/1/bin/bootstrap-vm.sh
+~~~
+
+### CLIENT CONFIGURATION
+
+* ADD BROWSER SHORTCUTS
+
+devops-nexus:
+~~~
+http://w.x.y.z:8081/
+~~~
+
 * ADD LOCATION TO GRADLE.PROPERTIES
 
 ~~~

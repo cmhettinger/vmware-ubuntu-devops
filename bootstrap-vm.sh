@@ -2,8 +2,6 @@
 
 # MAKE DIRECTORIES
 
-sudo mkdir -p /data/1
-sudo chown `whoami`:`whoami` /data/1
 mkdir -p /data/1/apps
 mkdir -p /data/1/certs
 mkdir -p /data/1/tmp; chmod 1777 /data/1/tmp
