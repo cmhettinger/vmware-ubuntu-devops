@@ -3,6 +3,10 @@
 sudo su root
 cd ~
 
+# CONFIG GIT CLIENT
+git config --global user.email "cmhettinger@hotmail.com"
+git config --global user.name "cmhettinger"
+
 # MAKE DIRECTORIES
 
 mkdir -p /data/1/apps
