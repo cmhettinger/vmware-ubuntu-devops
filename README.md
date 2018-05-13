@@ -32,9 +32,14 @@ echo "IdentityFile ~/.ssh/github" >> ~/.ssh/config
 * COPY SSH CREDS
 
 Copy files for GitHub into ~/.ssh
-  -- github
-  -- github.pub
 
+~~~
+github
+github.pub
+~~~
+
+chmod 600 ~/.ssh/*
+  
 * BOOTSTRAP VM
 
 ~~~

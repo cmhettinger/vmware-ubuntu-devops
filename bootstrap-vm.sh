@@ -95,4 +95,3 @@ JAVA_TOOL_OPTIONS=-Xss1280k; export JAVA_TOOL_OPTIONS
 PATH=\$PATH:\$JAVA_HOME/bin; export PATH
 export PS1="\u@\W $ "
 EOF
-
