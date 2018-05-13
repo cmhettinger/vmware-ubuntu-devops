@@ -2,3 +2,6 @@
 
 mkdir -p /data/1/logs
 date +%D' '%T > /data/1/logs/devops-startup.log
+
+/data/1/bin/dyndb-up
+
