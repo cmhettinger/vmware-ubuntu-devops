@@ -1,0 +1,6 @@
+#!/bin/bash
+
+DYNDB_PID=`ps -ef | grep DynamoDB | grep java | awk ' { print $2 } '`
+
+# send ctrl-c to application
+kill -SIGINT $DYNDB_PID
