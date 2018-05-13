@@ -98,4 +98,6 @@ EOF
 
 # ALL DONE
 
+/etc/update-motd.d/50-landscape-sysinfo
+
 echo "done.  reboot now..."
