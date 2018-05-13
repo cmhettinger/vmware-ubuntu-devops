@@ -1,0 +1,4 @@
+#!/bin/sh
+
+mkdir -p /data/1/logs
+date +%D' '%T > /data/1/logs/devops-shutdown.log

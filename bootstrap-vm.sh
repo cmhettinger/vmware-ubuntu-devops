@@ -2,6 +2,10 @@
 
 cd ~
 
+# CONFIG STARTUP/SHUTDOWN SCRIPTS
+cp /data/1/bin/devops.service /etc/systemd/system/devops.service
+systemctl enable devops
+
 # CONFIG GIT CLIENT
 git config --global user.email "cmhettinger@hotmail.com"
 git config --global user.name "cmhettinger"
