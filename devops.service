@@ -1,0 +1,11 @@
+[Unit]
+Description=Automated Devops Startup/Shutdown Scripts
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/data/1/bin/devops-startup
+ExecStop=/data/1/bin/devops-shutdown
+
+[Install]
+WantedBy=multi-user.target
