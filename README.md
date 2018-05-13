@@ -11,7 +11,6 @@ note during the process.
 ### RUN ON FIRST LOGIN / TBR
 
 * UPDATE SERVER
-
 ~~~
 sudo apt-get -y update
 sudo apt-get -y upgrade
@@ -19,7 +18,7 @@ sudo systemctl restart console-setup.service
 reboot
 ~~~
 
-* SETUP SSH DIRECTORY : NOTE: need to do this below as jenkins user/TBD
+* SETUP SSH DIRECTORY
 ~~~
 sudo su root
 mkdir -p ~/.ssh
@@ -31,7 +30,6 @@ echo "IdentityFile ~/.ssh/github" >> ~/.ssh/config
 * COPY SSH CREDS
 
 Copy files for GitHub into ~/.ssh
-
 ~~~
 github
 github.pub
@@ -43,7 +41,6 @@ chmod 600 ~/.ssh/*
 ~~~
 
 * BOOTSTRAP VM
-
 ~~~
 sudo su root
 mkdir -p /data/1
