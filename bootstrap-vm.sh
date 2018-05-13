@@ -85,9 +85,6 @@ wget --directory-prefix /data/1/tmp/ https://s3-us-west-2.amazonaws.com/dynamodb
 mkdir -p /data/1/apps/dynamodblocal
 tar zxvf /data/1/tmp/dynamodb_local_latest.tar.gz -C /data/1/apps/dynamodblocal
 
-# RETURN FROM SUDO
-
-exit
 
 # UPDATE BASHRC
 
