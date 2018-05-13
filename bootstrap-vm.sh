@@ -21,7 +21,7 @@ apt-get -y install jq
 
 # INSTALL JAVA8 / JCE
 
-add-apt-repository ppa:webupd8team/java
+add-apt-repository -y ppa:webupd8team/java
 apt-get -y update
 # https://askubuntu.com/questions/190582/installing-java-automatically-with-silent-option
 echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
