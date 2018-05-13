@@ -15,7 +15,6 @@ note during the process.
 ~~~
 sudo apt-get -y update
 sudo apt-get -y upgrade
-reboot
 sudo systemctl restart console-setup.service
 reboot
 ~~~
