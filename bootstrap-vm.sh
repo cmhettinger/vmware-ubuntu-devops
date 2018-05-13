@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sudo su root
 cd ~
 
 # CONFIG GIT CLIENT
