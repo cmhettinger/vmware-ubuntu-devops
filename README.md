@@ -38,8 +38,11 @@ github
 github.pub
 ~~~
 
+~~~
+sudo su root
 chmod 600 ~/.ssh/*
-  
+~~~
+
 * BOOTSTRAP VM
 
 ~~~
