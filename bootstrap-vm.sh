@@ -3,6 +3,7 @@
 cd ~
 
 # CONFIG STARTUP/SHUTDOWN SCRIPTS
+
 cp /data/1/bin/devops.service /etc/systemd/system/devops.service
 systemctl enable devops
 
@@ -103,5 +104,4 @@ EOF
 # ALL DONE
 
 /etc/update-motd.d/50-landscape-sysinfo
-
 echo "done.  reboot now..."
