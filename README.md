@@ -22,10 +22,11 @@ reboot
 
 * SETUP SSH DIRECTORY : NOTE: need to do this below as jenkins user/TBD
 ~~~
+sudo su root
 mkdir -p ~/.ssh
 ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
 echo "Host github.com" > ~/.ssh/config
-echo "IdentityFile ~/.ssh/git" >> ~/.ssh/config
+echo "IdentityFile ~/.ssh/github" >> ~/.ssh/config
 ~~~
 
 * COPY SSH CREDS
@@ -37,8 +38,8 @@ Copy files for GitHub into ~/.ssh
 * BOOTSTRAP VM
 
 ~~~
-sudo mkdir -p /data/1
-sudo chown `whoami`:`whoami` /data/1
+sudo su root
+mkdir -p /data/1
 git clone git@github.com:cmhettinger/vmware-ubuntu-devops.git /data/1/bin
 /data/1/bin/bootstrap-vm.sh
 ~~~
