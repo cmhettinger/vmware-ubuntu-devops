@@ -1,0 +1,2 @@
+#!/bin/bash
+/data/1/apps/apache-tomcat/bin/shutdown.sh

@@ -90,6 +90,20 @@ wget --directory-prefix /data/1/tmp/ https://s3-us-west-2.amazonaws.com/dynamodb
 mkdir -p /data/1/apps/dynamodblocal
 tar zxvf /data/1/tmp/dynamodb_local_latest.tar.gz -C /data/1/apps/dynamodblocal
 
+# INSTALL TOMCAT
+
+wget --directory-prefix /data/1/tmp/ http://mirror.cc.columbia.edu/pub/software/apache/tomcat/tomcat-8/v8.5.31/bin/apache-tomcat-8.5.31.tar.gz
+tar zxvf /data/1/tmp/apache-tomcat-8.5.31.tar.gz -C /data/1/apps
+ln -s /data/1/apps/apache-tomcat-8.5.31 /data/1/apps/apache-tomcat
+echo '# FIX ENCODED SLASH' >> /data/1/apps/apache-tomcat/conf/catalina.properties
+echo 'org.apache.tomcat.util.buf.UDecoder.ALLOW_ENCODED_SLASH=true' >> /data/1/apps/apache-tomcat/conf/catalina.properties
+sed -i '$ d' /data/1/apps/apache-tomcat/conf/context.xml
+echo '<Resources cachingAllowed="true" cacheMaxSize="100000" />' >> /data/1/apps/apache-tomcat/conf/context.xml
+echo '</Context>' >> /data/1/apps/apache-tomcat/conf/context.xml
+
+# INSTALL JENKINS
+
+wget --directory-prefix /data/1/apps/apache-tomcat/webapps/ http://mirrors.jenkins.io/war-stable/latest/jenkins.war
 
 # UPDATE BASHRC
 
@@ -97,6 +111,7 @@ cat >> ~/.bashrc << EOF
 # ---- LOCAL VM SETTINGS ----
 JAVA_HOME=/usr/lib/jvm/java-8-oracle; export JAVA_HOME
 JAVA_TOOL_OPTIONS=-Xss1280k; export JAVA_TOOL_OPTIONS
+JENKINS_HOME=/data/1/apps/jenkins-home; export JENKINS_HOME
 PATH=\$PATH:\$JAVA_HOME/bin; export PATH
 export PS1="\u@\W $ "
 EOF

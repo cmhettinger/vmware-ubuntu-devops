@@ -3,4 +3,5 @@
 mkdir -p /data/1/logs
 date +%D' '%T > /data/1/logs/devops-shutdown.log
 
+/data/1/bin/tomcat-down
 /data/1/bin/dyndb-down
