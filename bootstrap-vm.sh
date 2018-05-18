@@ -2,14 +2,14 @@
 
 cd ~
 
+# CONFIG GIT CLIENT
+git config --global user.email "cmhettinger@hotmail.com"
+git config --global user.name "cmhettinger"
+
 # CONFIG STARTUP/SHUTDOWN SCRIPTS
 
 cp /data/1/bin/devops.service /etc/systemd/system/devops.service
 systemctl enable devops
-
-# CONFIG GIT CLIENT
-git config --global user.email "cmhettinger@hotmail.com"
-git config --global user.name "cmhettinger"
 
 # MAKE DIRECTORIES
 
@@ -111,7 +111,6 @@ cat >> ~/.bashrc << EOF
 # ---- LOCAL VM SETTINGS ----
 JAVA_HOME=/usr/lib/jvm/java-8-oracle; export JAVA_HOME
 JAVA_TOOL_OPTIONS=-Xss1280k; export JAVA_TOOL_OPTIONS
-JENKINS_HOME=/data/1/apps/jenkins-home; export JENKINS_HOME
 PATH=\$PATH:\$JAVA_HOME/bin; export PATH
 export PS1="\u@\W $ "
 EOF

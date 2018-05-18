@@ -22,16 +22,16 @@ reboot
 sudo su root
 mkdir -p ~/.ssh
 ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
-echo "Host github.com" > ~/.ssh/config
-echo "IdentityFile ~/.ssh/github" >> ~/.ssh/config
+echo "Host git.com" > ~/.ssh/config
+echo "IdentityFile ~/.ssh/git" >> ~/.ssh/config
 ~~~
 
 * COPY SSH CREDS
 
 Copy files for GitHub into ~/.ssh
 ~~~
-github
-github.pub
+git
+git.pub
 ~~~
 
 ~~~
