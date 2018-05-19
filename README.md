@@ -22,7 +22,7 @@ reboot
 sudo su root
 mkdir -p ~/.ssh
 ssh-keyscan -t rsa github.com > ~/.ssh/known_hosts
-echo "Host git.com" > ~/.ssh/config
+echo "Host github.com" > ~/.ssh/config
 echo "IdentityFile ~/.ssh/git" >> ~/.ssh/config
 ~~~
 
