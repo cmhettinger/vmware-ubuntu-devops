@@ -1,6 +1,14 @@
 #!/bin/bash
 export CATALINA_OPTS="-XX:MaxPermSize=256m -Xmx4096m -Xms256m -server -Drdeck.base=/data/1/apps/rundeck-base -Drundeck.config.location=/data/1/apps/rundeck-base/rundeck-config.properties"
 export JENKINS_HOME=/data/1/apps/jenkins-home
+export RDECK_BASE=/data/1/apps/rundeck-base
+export GRADLE_HOME=/data/1/apps/gradle
+export GRADLE_USER_HOME=/data/1/apps/gradle-user-home
+export GRADLE_OPTS=-Xmx512m
+# GRADLE_OPTS can also add -Djavax.net.ssl.trustStore...
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+export JAVA_TOOL_OPTIONS=-Xss1280k
+PATH=$JAVA_HOME/bin:$PATH:/data/1/bin:$GRADLE_HOME/bin; export PATH
 # next line is needed because home is not set when this is launched during vm startup
 export HOME=/root
 /data/1/apps/apache-tomcat/bin/startup.sh
